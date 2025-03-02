@@ -3,21 +3,39 @@
     margin: 0;
     padding: 0;
   }
-  
- .half-width {
+.half-width {
     width: 40vw;        
-    height: auto;
-    max-height: 100vh;
+    height: 100vh;
     object-fit: cover;
 }
 
+/* Tablet View */
+@media (max-width: 1024px) {
+    .half-width {
+        width: 50vw;
+        height: 90vh;
+    }
+}
+
+/* Mobile View */
 @media (max-width: 768px) {
     .half-width {
         width: 100%;
-        height: auto;
-        max-height: 50vh;
+        height: 80vh; /* Ensures image stays large */
+        object-fit: cover;
     }
 }
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    .half-width {
+        
+        padding-top:25px;
+        width: 150px;
+        height: 75vh; /* Keeps image recognizable */
+        object-fit: cover;
+    }
+}  
 #skills .row {
     display: flex;
     justify-content: center;
